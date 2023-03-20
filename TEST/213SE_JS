@@ -1,0 +1,15 @@
+
+//Empty array
+let myArr = [];
+
+let myArr = ["1",  3"Teddy" , "Luke" , 20, 20.50,];
+
+//Expected element
+//["Teddy" , "Luke" , 20, 20.50,];
+
+//Before pushing new element
+console.log(myArr1);
+
+//After pushing new element
+myArr1.push(30);
+console.log(myArr1);
