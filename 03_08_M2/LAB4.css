@@ -1,0 +1,30 @@
+.container{
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    position: absolute; 
+    height: auto;
+    top:0;
+    bottom:0;
+    background:#ff8;
+    color:aquamarine
+}
+
+.left_column{
+    position: relative;
+    left: 0;
+    top: 0;
+    border: 1px solid red;
+    color: aquamarine;
+    background-color: deeppink; 
+}
+
+
+.p{
+    color: violet;
+    object-position: left;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    
+}
