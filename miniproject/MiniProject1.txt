@@ -1,0 +1,94 @@
+﻿1. What was your requirements gathering and design process? Was it useful/successful?
+
+
+-Find an API that works
+I decided to create a Pokedex for my mini project; I chose to make a Pokedex because I have always been a massive fan of Pokemon and have always played the games growing up. When going through the outline for the project, I found that the basic features of a pokedex would be efficient for this project. 
+
+
+2. Give a high-level overview of your application and its features.
+
+
+So pretty much, the Pokedex is already loaded on the web page as soon as the site is opened. The site and pokedex load up at species #1, Bulbasaur. It features an image of the specific Pokemon on the top left of the mock Pokedex. On the bottom left of the Pokedex, it gives information on the species of the Pokemon based on the Pokedex information from the original Pokemon games. The type of the Pokemon is listed - for example, in Bulbasaurs case, its type is grass and poison. The types are loaded in the same colour which the types are labelled in the Pokemon games. The interface on the right side of the Pokedex features a list of all the Pokemon apart from the original 151 Kanto Pokemon. So, for example, if I wanted to get information on Moltres, a legendary Pokemon, I would scroll down to the right of the Pokedex’s user interface, select and click on the Pokemon’s name box. Once I have done that, as shown, all of the data for this Pokemon is loaded from the Pokemon Api, which lists Moltres’s types, names and information. 
+
+
+3. Where does its data come from (external/internal APIs)?
+From poke Api
+https://pokeapi.co/
+https://pokeapi.co/api/v2/pokemon/
+
+
+4. How is this data processed and displayed?
+
+
+So I had to get the data from the API and have it display the data types we wanted to show. If we take a quick look at the API for just Bulbasaur, we can see that the amount of data logged is crazy. 
+
+
+https://pokeapi.co/api/v2/pokemon/1/
+
+
+The first thing that needed to be done was to select the data values I wanted to display in the Pokedex. The data types I chose were Pokemon name, image, types and description.
+These four elements were chosen as they are the basic features of a Pokedex within the game and the basic information that players will want to gain. In a basic algorithm, the data that we were effectively looking for is: 
+
+
+{1 : {"name" : "bulbsaur", "img" : url, "type" : ["grass", "poison"], "desc" : "...."} }
+
+
+I then created a function to look up this function each time to source and get all of this data from the API, as we can see.
+
+
+Whilst it is all good to fetch the specific data of the particular Pokemon, the data needs to be visually organised and displayed for viewers to understand. I have done this by specifically linking each of the four elements to a specific div for the data to be loaded on each div when selecting the Pokemon you want to look up. 
+
+
+I made the personal decision for the Pokemon to all be listed on the right hand of the user interface rather than just letting users input the Pokemon Number/name. I have decided to create a true copy of what the actual in-game pokedex looks like. In the script, to get all 151 of the names to be displayed, I added getElementByID(‘pokemon-list’), revealing all 151 Pokemon without me having to input each into the code. I also made sure to append the element after which takes an object as an argument and adds it to the end of an existing list.
+
+
+Adding an overflow in my stylesheet for the pokemon-names was extremely important, and it took me a long time to work out how to add it to my Pokedex. The overflow lets it scroll down the ‘Pokedex’ instead of scrolling down the overall webpage. It is what holds the Pokedex together on the website. 
+
+
+
+
+5. How can the user interact with your application?
+
+
+As stated before, users can interact with the app by selecting their favourite or most hated Pokemon, finding out what type they are, what it looks like, its Pokemon number and a description based on the Pokedex entries of Gen 1. 
+
+
+
+
+6. What JS techniques have you used (e.g., objects, arrays, DOM functions, loops, functions)?
+
+
+Multiple strings were utilised to create the function. For example, the getElementById() method of the Document interface returns an Element object representing the element whose id property matches the specified string. In this case, the details searched for were the Pokemon name, type, image and description based on the ID inputted. The ID would change based on the Pokemon selected on the user interface. For example, to look up info on the Pokemon Rhydon #112. The element ID is #112. The opening input on the loaded webpage is #1, representing the first Pokemon. 
+
+
+
+
+7. What external tools/libraries have you used (e.g., Bootstrap, Axios, Charts)? How? Why?
+
+
+Google fonts 
+
+
+8. What kinds of HTML elements have you used (e.g., tables, forms, divs, lists, headings, menus, videos, images)?
+
+
+HTML elements utilised were reasonably basic, The header, aka the page's title, was created with a Div on top. I used a Pokemon image as the background of the header image and had a title stating Kanto Pokedex. 
+
+
+Following that, I created another DIV under the title to explain to users what the mini-project does and how to use it. Again, an image of a Pokemon battle is in the background. 
+
+
+
+
+9. What kinds of CSS features have you used (e.g., animations, backgrounds, fonts, colours, flexbox, grid)?
+
+
+
+
+CSS features used a Pokedex image as the background for the mock Pokedex, and colours and fonts have been utilised that match what a Pokedex looks like in-game. The user interface is very to the point and visually pleasing. 
+
+
+10. How might you extend the features of your application in the future?
+
+
+There are multiple things that I would love to add to the application in the future, the first being to provide base statistic information for each Pokemon within the Pokedex. I would also love to add a webpage explaining the Pokemon type chart effectiveness, along with listing the types that the selected Pokemon is weak to or is effective against. I would also love to add all 1010 Pokemon to be a part of the Pokedex rather than just limiting it to the original 151.
